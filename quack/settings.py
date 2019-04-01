@@ -81,7 +81,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'quack',
+        'NAME': 'nadik',
         'USER': 'postgres',
         'PASSWORD': 'xxm19890516',
         'HOST': 'localhost',
