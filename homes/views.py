@@ -39,3 +39,5 @@ def postsign(request):
     user = auth.sign_in_with_email_and_password(email, password)
 
     return render(request, 'homes/home.html', {'email':email})
+
+

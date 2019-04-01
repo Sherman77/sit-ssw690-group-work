@@ -18,6 +18,7 @@ from django.urls import path
 import homes.views
 import sales.views
 import portfolio.views
+import job_market.views
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -29,8 +30,10 @@ urlpatterns = [
     path('homes/<int:service_id>', homes.views.section, name='section'),
     path('welcome', homes.views.welcome, name='welcome'),
     path('sales', sales.views.saleslist, name='sales'),
+    path('jobs', job_market.views.jobslist, name='jobs'),
     path('sales/<int:item_id>', sales.views.item_detail, name='item_detail'),
-    path('people/<int:people_id>', portfolio.views.people_detail, name='portfolio_page')
+    path('people/<int:people_id>', portfolio.views.people_detail, name='portfolio_page'),
+    
 
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

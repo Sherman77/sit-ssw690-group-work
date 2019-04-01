@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'homes',
     'sales',
     'portfolio',
+    'job_market',
 ]
 
 MIDDLEWARE = [
