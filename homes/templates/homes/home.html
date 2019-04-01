@@ -12,15 +12,16 @@
             <div class="container">
                 <p class="lead text-muted">QuAck</p>
                 <img src="{% static 'dabbing-duck.jpg' %}" height=300>
-                <p class="lead text-muted">Welcome to our homepage!</p>
+                <p class="lead text-muted">Welcome {{ email }}</p>
+                <p class="lead text-muted">to our home page!</p>
             </div>
         </section>
 
         <div class="container">
         <div class="row">
-        <div class="col-md-4">   
-{% for service in services.all %}  
-            <a href="{% url 'section' service.id %}">    
+        <div class="col-md-4">
+{% for service in services.all %}
+            <a href="{% url 'section' service.id %}">
             <div class="card mb-4 shadow-sm">
             <img class="card-img-top" src="{{ service.image.url }}" alt="Card image cap">
             <div class="card-body">
@@ -31,7 +32,7 @@
         </div>
         </div>
 {% endfor %}
-        
+
     </main>
     </body>
 </html>

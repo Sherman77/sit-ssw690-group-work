@@ -22,6 +22,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('signin', homes.views.signin, name='signin'),
+    path('postsign', homes.views.postsign, name='postsign'),
     path('admin/', admin.site.urls),
     path('', homes.views.homepage, name='home'),
     path('homes/<int:service_id>', homes.views.section, name='section'),
